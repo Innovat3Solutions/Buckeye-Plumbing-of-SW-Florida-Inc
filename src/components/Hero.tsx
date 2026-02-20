@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[85dvh] md:min-h-[95dvh] lg:min-h-[100dvh] flex items-center overflow-hidden bg-gray-900 pt-16 md:pt-0">
+    <section className="relative w-full min-h-[75dvh] md:min-h-[85dvh] lg:min-h-[88dvh] flex items-center overflow-hidden bg-gray-900 pt-12 md:pt-0">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -32,7 +32,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="inline-flex items-center gap-2 md:gap-3 bg-white/5 backdrop-blur-xl border border-white/10 px-4 md:px-5 py-2 rounded-full text-[11px] md:text-sm font-semibold text-white mb-5 md:mb-10 shadow-2xl"
+              className="inline-flex items-center gap-2 md:gap-3 bg-white/5 backdrop-blur-xl border border-white/10 px-4 md:px-5 py-2 rounded-full text-[11px] md:text-sm font-semibold text-white mb-4 md:mb-6 shadow-2xl"
             >
               <span className="relative flex h-2 w-2 md:h-2.5 md:w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -42,8 +42,8 @@ export default function Hero() {
             </motion.div>
 
             {/* Headline */}
-            <div className="mb-6 md:mb-8 relative">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold leading-[0.9] text-white tracking-tight drop-shadow-lg">
+            <div className="mb-4 md:mb-8 relative">
+              <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-display font-bold leading-[0.9] text-white tracking-tight drop-shadow-lg">
                 Southwest Florida's <br className="hidden md:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-buckeye-red to-buckeye-red-light">Most Trusted</span>
                 <br className="md:hidden" /> Plumbers
@@ -60,10 +60,10 @@ export default function Hero() {
             </div>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-xl md:text-2xl text-gray-300/90 mb-8 md:mb-12 max-w-2xl mx-auto md:mx-0 leading-relaxed font-light tracking-wide border-l-4 border-buckeye-red pl-6 hidden md:block">
+            <p className="text-base sm:text-xl md:text-xl lg:text-2xl text-gray-300/90 mb-8 md:mb-8 max-w-2xl mx-auto md:mx-0 leading-relaxed font-light tracking-wide border-l-4 border-buckeye-red pl-6 hidden md:block">
               Reliable, licensed, and community-focused. Expert residential and commercial plumbing for Naples, Estero, Bonita Springs, and Marco Island.
             </p>
-            <p className="text-base text-gray-300/90 mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed font-light md:hidden">
+            <p className="text-base text-gray-300/90 mb-6 max-w-xl mx-auto md:mx-0 leading-relaxed font-light md:hidden">
               Reliable, licensed, and community-focused. Expert residential and commercial plumbing for Southwest Florida.
             </p>
 
@@ -71,7 +71,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start relative z-20">
               <a
                 href="tel:2394386662"
-                className="group flex items-center justify-center gap-3 bg-buckeye-red hover:bg-buckeye-red-dark text-white px-8 py-4 md:px-10 md:py-5 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-buckeye-red/30 transform hover:-translate-y-1 active:scale-95"
+                className="group flex items-center justify-center gap-3 bg-buckeye-red hover:bg-buckeye-red-dark text-white px-8 py-4 md:px-8 md:py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-buckeye-red/30 transform hover:-translate-y-1 active:scale-95"
               >
                 <div className="bg-white/20 p-1.5 rounded-full group-hover:bg-white/30 transition-colors">
                   <Phone className="w-5 h-5 fill-current" />
@@ -81,7 +81,7 @@ export default function Hero() {
 
               <Link
                 to="/contact"
-                className="flex items-center justify-center gap-3 bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 md:px-10 md:py-5 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-white/20 transform hover:-translate-y-1 active:scale-95"
+                className="flex items-center justify-center gap-3 bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 md:px-8 md:py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-white/20 transform hover:-translate-y-1 active:scale-95"
               >
                 <Calendar className="w-5 h-5 text-buckeye-red" />
                 Schedule Online
@@ -89,7 +89,7 @@ export default function Hero() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-start md:justify-start gap-3 md:gap-8 mt-8 md:mt-16 border-t border-white/5 pt-6 md:pt-8 pr-28 md:pr-0">
+            <div className="flex flex-wrap justify-start md:justify-start gap-3 md:gap-8 mt-6 md:mt-10 border-t border-white/5 pt-4 md:pt-6 pr-28 md:pr-0">
               {[
                 { text: "Licensed", mobileText: "Licensed", delay: 0.6 },
                 { text: "Insured & Bonded", mobileText: "Insured", delay: 0.7 },
@@ -115,7 +115,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 100, scale: 0.8 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ delay: 0.4, duration: 1, type: "spring", bounce: 0.3 }}
-            className="hidden lg:flex lg:flex-shrink-0 lg:w-[400px] xl:w-[500px] items-end justify-center relative"
+            className="hidden lg:flex lg:flex-shrink-0 lg:w-[320px] xl:w-[400px] items-end justify-center relative"
           >
             <img
               src="/assets/mascot-thumbs-up.png"
