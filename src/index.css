@@ -6,9 +6,22 @@
   --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
 
   --color-buckeye-red: #E31E24;
+  --color-buckeye-red-dark: #B91015;
+  --color-buckeye-red-light: #FF4D52;
+  
   --color-buckeye-gray: #6D6E71;
+  --color-buckeye-gray-dark: #4A4B4D;
+  --color-buckeye-gray-light: #97999B;
+
   --color-buckeye-brown: #8B4513;
   --color-buckeye-black: #000000;
+  
+  --ease-spring: linear(
+    0, 0.009, 0.035 2.1%, 0.141 4.4%, 0.723 12.9%, 0.938 16.7%, 1.017,
+    1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%,
+    1.051 39.6%, 1.017 43.1%, 0.991, 0.977 51%, 0.974 53.8%, 0.975 57.1%,
+    0.997 69.8%, 1.003 76.9%, 1.004 83.8%, 1
+  );
 }
 
 body {
@@ -21,4 +34,42 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   text-transform: uppercase;
+}
+
+/* Safe area padding for notched phones (iPhone X+, etc.) */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-area-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Improve tap targets on mobile */
+@media (max-width: 768px) {
+  input, select, textarea, button {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better touch feedback */
+@media (hover: none) {
+  .active\:scale-95:active {
+    transform: scale(0.95);
+  }
 }
