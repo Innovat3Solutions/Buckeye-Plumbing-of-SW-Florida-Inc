@@ -24,7 +24,7 @@ export default function ContactForm() {
       setIsSubmitted(true);
     }, 1000);
   };
-
+  //new form
   if (isSubmitted) {
     return (
       <div className="bg-green-50 p-6 md:p-8 rounded-2xl text-center border border-green-200">
