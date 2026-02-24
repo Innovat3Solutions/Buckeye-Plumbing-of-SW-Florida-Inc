@@ -43,7 +43,7 @@ export default function Contact() {
         {/* Curved Top Edge */}
         <div className="absolute -top-8 md:-top-16 left-0 right-0 h-8 md:h-16 bg-gray-100 rounded-t-[2rem] md:rounded-t-[3rem]" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:pt-16 md:pb-12 relative">
           {/* Mobile: Contact Info First, Then Form */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 relative">
             {/* Mascot - Behind the card, upper body visible (desktop only) */}
@@ -67,8 +67,11 @@ export default function Contact() {
               transition={{ delay: 0.1 }}
               className="lg:col-span-1 relative z-10 order-1 lg:order-1"
             >
-              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-200 h-full">
-                <h3 className="text-xl md:text-2xl font-bold font-display text-gray-900 mb-4 md:mb-6">Contact Information</h3>
+              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-2xl border border-gray-100 relative overflow-hidden group">
+                {/* Premium Red Accent Bar */}
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-buckeye-red via-buckeye-red-light to-buckeye-red z-20" />
+
+                <h3 className="text-xl md:text-2xl font-bold font-display text-gray-900 mb-6 md:mb-8 relative z-10">Contact Information</h3>
 
                 {/* Mobile: Compact grid layout */}
                 <div className="grid grid-cols-2 gap-4 md:hidden">
@@ -183,7 +186,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 md:mt-16"
+            className="mt-6 md:mt-10"
           >
             <h3 className="text-xl md:text-2xl font-bold font-display text-gray-900 mb-4 md:mb-6 text-center">Our Service Area</h3>
             <div className="bg-white p-2 md:p-3 rounded-xl md:rounded-2xl shadow-xl border border-gray-200">
