@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Phone, CheckCircle, Home, Building2, AlertCircle } from 'lucide-react';
@@ -130,6 +131,10 @@ export default function Services() {
 
   return (
     <div className="bg-gray-50 pb-8 md:pb-20">
+      <Helmet>
+        <title>Plumbing Services | Buckeye Plumbing of SW Florida</title>
+        <meta name="description" content="Comprehensive residential and commercial plumbing services in Southwest Florida. We handle leak repairs, water heaters, drain cleaning, repiping, and 24/7 emergencies." />
+      </Helmet>
       {/* Header with Mascot */}
       <div className="bg-gray-900 text-white py-12 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">

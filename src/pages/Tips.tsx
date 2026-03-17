@@ -1,3 +1,5 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import {
   Droplets,
@@ -124,6 +126,10 @@ const quickFacts = [
 export default function Tips() {
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Plumbing Tips & Advice | Buckeye Plumbing of SW Florida</title>
+        <meta name="description" content="Expert plumbing tips, advice, and maintenance guides from the professionals at Buckeye Plumbing. Learn how to prevent leaks, save water, and maintain your system." />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">

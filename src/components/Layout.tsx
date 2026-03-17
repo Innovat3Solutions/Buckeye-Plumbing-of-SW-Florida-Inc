@@ -199,7 +199,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-display font-bold mb-6 text-buckeye-red">Quick Links</h3>
             <ul className="space-y-3">
-              {['Home', 'Services', 'About Us', 'Tips', 'Contact'].map((item) => (
+              {['Home', 'Services', 'About Us', 'Tips', 'Contact', 'Reviews'].map((item) => (
                 <li key={item}>
                   <Link to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-buckeye-red rounded-full"></span>
@@ -207,6 +207,12 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-buckeye-red rounded-full"></span>
+                  Sitemap
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -214,11 +220,23 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-display font-bold mb-6 text-buckeye-red">Our Services</h3>
             <ul className="space-y-3">
-              {['Leak Detection', 'Water Heaters', 'Drain Cleaning', 'Repiping', 'Commercial Plumbing'].map((item) => (
-                <li key={item}>
-                  <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2">
+              {[
+                { name: 'Leak Detection', path: '/services/leak-and-pipe-repair' },
+                { name: 'Water Heaters', path: '/services/water-heater-services' },
+                { name: 'Drain Cleaning', path: '/services/drain-cleaning-and-jetting' },
+                { name: 'Repiping', path: '/services/repiping-services' },
+                { name: 'Garbage Disposal', path: '/services/garbage-disposal' },
+                { name: 'Kitchen & Bath', path: '/services/kitchen-and-bathroom-plumbing' },
+                { name: 'New Construction', path: '/services/new-construction-and-remodel' },
+                { name: 'Backflow Prevention', path: '/services/backflow-prevention' },
+                { name: 'Grease Traps', path: '/services/grease-trap-services' },
+                { name: 'Commercial Plumbing', path: '/services/commercial-plumbing' },
+                { name: 'Sewer Emergencies', path: '/services/emergency/sewer-line-emergency' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link to={item.path} className="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-buckeye-red rounded-full"></span>
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -231,7 +249,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400 text-sm">
                 <MapPin className="w-5 h-5 text-buckeye-red shrink-0 mt-0.5" />
-                <span>Naples, Fort Myers, Cape Coral, Bonita Springs, Marco Island, Lehigh Acres & More</span>
+                <span className="flex flex-wrap gap-x-1">
+                  <Link to="/service-areas/naples" className="hover:text-white">Naples,</Link>
+                  <Link to="/service-areas/fort-myers" className="hover:text-white">Fort Myers,</Link>
+                  <Link to="/service-areas/cape-coral" className="hover:text-white">Cape Coral,</Link>
+                  <Link to="/service-areas/bonita-springs" className="hover:text-white">Bonita Springs,</Link>
+                  <Link to="/service-areas/marco-island" className="hover:text-white">Marco Island,</Link>
+                  <Link to="/service-areas/lehigh-acres" className="hover:text-white">Lehigh Acres</Link>
+                  <span className="text-gray-500">& More</span>
+                </span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <Phone className="w-5 h-5 text-buckeye-red shrink-0" />

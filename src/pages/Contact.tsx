@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import ContactForm from '../components/ContactForm';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -5,6 +6,10 @@ import { motion } from 'motion/react';
 export default function Contact() {
   return (
     <div className="bg-gray-900 min-h-screen">
+      <Helmet>
+        <title>Contact Us | Buckeye Plumbing of SW Florida</title>
+        <meta name="description" content="Contact Buckeye Plumbing for 24/7 service in Southwest Florida. Call (239) 438-6662 for emergency repairs, free estimates, or to schedule a plumber." />
+      </Helmet>
       {/* Mobile Quick Call CTA - Only visible on mobile */}
       <div className="md:hidden bg-buckeye-red px-4 py-4">
         <a

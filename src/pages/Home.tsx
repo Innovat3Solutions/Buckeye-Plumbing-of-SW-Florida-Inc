@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import ServicesPreview from '../components/ServicesPreview';
@@ -9,6 +10,10 @@ import { Phone } from 'lucide-react';
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>Buckeye Plumbing of SW Florida | 24/7 Plumbing Services</title>
+        <meta name="description" content="Southwest Florida's most reliable plumbing service with 25 years of experience. Licensed, insured, and dedicated to 100% customer satisfaction. Available 24/7 for emergencies." />
+      </Helmet>
       <Hero />
       <Features />
       <ServicesPreview />

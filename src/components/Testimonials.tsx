@@ -1,6 +1,7 @@
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
-import { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import ReviewFunnelModal from './ReviewFunnelModal';
 
 const testimonials = [
   {
@@ -48,6 +49,7 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isTouching, setIsTouching] = useState(false);
@@ -166,9 +168,20 @@ export default function Testimonials() {
                 <Star key={i} className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 fill-current" />
               ))}
             </div>
-            <p className="text-base md:text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-base md:text-xl text-gray-300 max-w-2xl mx-auto mb-6 md:mb-8">
               Rated 5 Stars on Google & Angi
             </p>
+            <motion.button
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              onClick={() => setIsReviewModalOpen(true)}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-buckeye-red to-[#b31414] hover:from-[#b31414] hover:to-buckeye-red text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-buckeye-red/30 transition-all hover:scale-105 ring-2 ring-transparent focus:outline-none focus:ring-buckeye-red/50"
+            >
+              <Star className="w-5 h-5 fill-current" />
+              Leave a Review
+            </motion.button>
           </motion.div>
 
           {/* Desktop Mascot - Thumbs Up */}
@@ -291,6 +304,11 @@ export default function Testimonials() {
           )}
         </div>
       </div>
+
+      <ReviewFunnelModal 
+        isOpen={isReviewModalOpen} 
+        onClose={() => setIsReviewModalOpen(false)} 
+      />
     </section>
   );
 }

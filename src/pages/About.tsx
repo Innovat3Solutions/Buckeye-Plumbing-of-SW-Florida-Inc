@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import { ShieldCheck, MapPin, Clock, Award, Wrench, Building2, Home, CheckCircle, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -40,6 +41,10 @@ const expertise = [
 export default function About() {
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>About Us | Buckeye Plumbing of SW Florida</title>
+        <meta name="description" content="Learn about Buckeye Plumbing of Southwest Florida. With 25 years of experience, we provide licensed and insured residential and commercial plumbing services." />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-24 bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
