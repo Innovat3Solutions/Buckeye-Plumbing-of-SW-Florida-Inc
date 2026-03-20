@@ -14,6 +14,10 @@ import ServiceDetailTemplate from './pages/templates/ServiceDetailTemplate';
 import TipDetailTemplate from './pages/templates/TipDetailTemplate';
 import Reviews from './pages/Reviews';
 
+//A2P
+import Privacypolicy from './pages/A2P/Privacypolicy';
+import TermsAndConditions from './pages/A2P/Terms&service';
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -44,6 +48,10 @@ export default function App() {
             <Route path="/services/emergency/:serviceId" element={<ServiceDetailTemplate isEmergency={true} />} />
             <Route path="/services/:serviceId" element={<ServiceDetailTemplate isEmergency={false} />} />
             <Route path="/tips/:tipId" element={<TipDetailTemplate />} />
+
+            {/* A2P Pages */}
+            <Route path="/privacy-policy" element={<Privacypolicy/>} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           </Routes>
         </Layout>
       </Router>
