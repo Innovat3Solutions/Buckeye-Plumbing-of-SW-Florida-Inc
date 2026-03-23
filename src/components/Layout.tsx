@@ -267,9 +267,6 @@ const Footer = () => {
                 <Clock className="w-5 h-5 text-buckeye-red shrink-0" />
                 <span>Open 24/7, Always Ready</span>
               </li>
-              <li className="text-gray-400 text-sm">
-                <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link> | <Link to="/terms-and-conditions" className="hover:text-white transition-colors">Terms and Conditions</Link>
-              </li>
             </ul>
           </div>
         </div>

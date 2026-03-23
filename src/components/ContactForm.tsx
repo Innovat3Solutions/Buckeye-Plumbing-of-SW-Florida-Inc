@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(true);
@@ -66,6 +67,14 @@ export default function ContactForm() {
           data-form-id="xmiSHQKWKcmfHz6l47FM"
           title="buckeye-plumbing-contact-form"
         ></iframe>
+
+        <div>
+          <ui>
+             <li className="text-gray-400 text-sm text-center pb-5">
+                <Link to="/privacy-policy" className="hover:text-[#E31E24] transition-colors">Privacy Policy</Link> | <Link to="/terms-and-conditions" className="hover:text-[#E31E24] transition-colors">Terms and Conditions</Link>
+              </li>
+          </ui>
+        </div>
       </motion.div>
     </div>
   );
